@@ -1,6 +1,6 @@
 <template>
     <div class="contactPage">
-        <div class="photo" :style="'background-image: url(/img/shipsCrew.jpg)'">
+        <div class="photo" :style="'background-image: url(/img/ShipsCrew.jpg)'">
             <div class="img-wrapper">
                 <!-- <img src="/svg/stroke.svg"> -->
             </div>
