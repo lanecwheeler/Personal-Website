@@ -10,7 +10,7 @@
         <br/><br/>
         Well me too! Enter - SeeRT!
     </p>
-    <img src="/src/assets/SeeRTExamples/SeeRTBeforeAfter.png" alt="I despise aliased edges"/>
+    <img src="/img/SeeRTExamples/SeeRTBeforeAfter.png" alt="I despise aliased edges"/>
     <table>
         <thead>
             <tr>
@@ -20,16 +20,16 @@
         </thead>
         <tbody>
             <tr>
-                <td><img src="/src/assets/SeeRTExamples/GameBefore.png" alt="Before"></td>
-                <td><img src="/src/assets/SeeRTExamples/GameAfter.png" alt="After"></td>
+                <td><img src="/img/SeeRTExamples/GameBefore.png" alt="Before"></td>
+                <td><img src="/img/SeeRTExamples/GameAfter.png" alt="After"></td>
             </tr>
             <tr>
-                <td><img src="/src/assets/SeeRTExamples/PokemonBefore.png" alt="Before"></td>
-                <td><img src="/src/assets/SeeRTExamples/PokemonAfter.png" alt="After"></td>
+                <td><img src="/img/SeeRTExamples/PokemonBefore.png" alt="Before"></td>
+                <td><img src="/img/SeeRTExamples/PokemonAfter.png" alt="After"></td>
             </tr>
             <tr>
-                <td><img src="/src/assets/SeeRTExamples/HunterXHunterBefore.png" alt="Before"></td>
-                <td><img src="/src/assets/SeeRTExamples/HunterXHunterAfter.png" alt="After"></td>
+                <td><img src="/img/SeeRTExamples/HunterXHunterBefore.png" alt="Before"></td>
+                <td><img src="/img/SeeRTExamples/HunterXHunterAfter.png" alt="After"></td>
             </tr>
         </tbody>
     </table>

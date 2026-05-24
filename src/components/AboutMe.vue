@@ -40,7 +40,7 @@
     .photo {
         min-height: 30vh;
         position: relative;
-        background-image: url('../assets/me-cute.jpg');
+        background-image: url('/img/me-cute.jpg');
         background-size: cover;
         background-position: 100% 40%;
     }

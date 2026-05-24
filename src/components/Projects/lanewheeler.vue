@@ -4,7 +4,7 @@
         If you wanna see something fun, try punching in the <span title="↑ ↑ ↓ ↓ ← → ← → B A">Konami Code</span>
         with your keyboard ;)
     </p>
-    <img src="/src/assets/Cube.png" alt="It's like inception... kinda?"/>
+    <img src="/img/Projects/Cube.png" alt="It's like inception... kinda?"/>
 </template>
 
 <style scoped>

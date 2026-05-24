@@ -4,7 +4,7 @@
         with gaming mice that have programmable side buttons or keypads (e.g. like my Razer MMO mouse).
         Type text into any application without lifting your hand from the mouse.
     </p>
-    <img src="/src/assets/WinMT.png" alt="Look, I typed all that with my mouse buttons!"/>
+    <img src="/img/Projects/WinMT.png" alt="Look, I typed all that with my mouse buttons!"/>
 </template>
 
 <style scoped>

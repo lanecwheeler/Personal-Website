@@ -18,7 +18,7 @@
             title: 'Linkedin',
             url: 'https://www.linkedin.com/in/lanecwheeler/',
             style: `
-                background-image: url(/src/assets/me-cute.jpg);
+                background-image: url(/img/me-cute.jpg);
                 background-position: 50% 40%;
             `,
             shade: `background-color: rgb(0, 115, 177, .75);`
@@ -27,7 +27,7 @@
             title: 'Instagram',
             url: 'https://www.instagram.com/lanecwheeler/',
             style: `
-                background-image: url(/src/assets/me-and-the-boys.jpg);
+                background-image: url(/img/me-and-the-boys.jpg);
                 background-position: 60% 60%;
             `,
             shade: `background-color: rgb(237, 73, 86, .75);`
@@ -36,7 +36,7 @@
             title: 'Facebook',
             url: 'https://www.facebook.com/lanecwheeler',
             style: `
-                background-image: url(/src/assets/me-and-the-fam.jpg);
+                background-image: url(/img/me-and-the-fam.jpg);
                 background-position: 50% 30%;
             `,
             shade: `background-color: rgb(59, 89, 152, .75);`
@@ -45,7 +45,7 @@
         //     title: 'Twitter',
         //     url: 'https://twitter.com/lanecwheeler',
         //     style: `
-        //         background-image: url(/src/assets/me-and-the-pres.jpeg);
+        //         background-image: url(/img/me-and-the-pres.jpeg);
         //         background-position: 70% 50%;
         //     `,
         //     shade: `background-color: rgb(29, 161, 242, .75);`
