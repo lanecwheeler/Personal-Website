@@ -63,7 +63,9 @@
     const l = ref(hslChannel(40, 70));
     const hslParts = computed(() => `hsl(${isNastyColor ? h.value + 180 : h.value} ${s.value} ${l.value})`);
 
-    const isMobile = computed(() => window.innerWidth < 900);
+    const isMobile = ref(window.innerWidth < 900);
+
+    const handleResize = () => isMobile.value = window.innerWidth < 900;
     // Scroll handler
     const currentlyScrolling = ref(false);
     const isScrolled = ref(false);
@@ -82,6 +84,7 @@
             isPlaying.value = false;
         });
         document.addEventListener('keyup', konamiWatch);
+        window.addEventListener('resize', handleResize);
     })
 
     const handleScroll = (e) => {
