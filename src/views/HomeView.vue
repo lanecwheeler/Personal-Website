@@ -63,7 +63,7 @@
     const l = ref(hslChannel(40, 70));
     const hslParts = computed(() => `hsl(${isNastyColor ? h.value + 180 : h.value} ${s.value} ${l.value})`);
 
-    const isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isMobile = window.innerWidth < 900;
     // Scroll handler
     const currentlyScrolling = ref(false);
     const isScrolled = ref(false);
@@ -218,11 +218,6 @@
         --quickAnim: all .25s cubic-bezier(0.65,0,0.35,1);
         --accentText: oklch(60% 0.1 var(--hue));
         --bpm: bassBump v-bind(beatMsString) ease-out infinite;
-
-        --md-bp: 1000px;
-        --sm-bp: 768px;
-        --xs-bp: 650px;
-        
         
         &::-webkit-scrollbar {
             width: 10px;
