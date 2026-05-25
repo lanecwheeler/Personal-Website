@@ -65,7 +65,7 @@
             gitHub: "https://github.com/lanecwheeler/SeeRT-Overlay",
         },
         {
-            title: "lanewheeler.com",
+            title: "lanewheeler.dev",
             ai: false,
             component: Site,
             img: "/img/me-cooler.jpg",
