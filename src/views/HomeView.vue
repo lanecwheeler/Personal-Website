@@ -63,7 +63,7 @@
     const l = ref(hslChannel(40, 70));
     const hslParts = computed(() => `hsl(${isNastyColor ? h.value + 180 : h.value} ${s.value} ${l.value})`);
 
-    const isMobile = window.innerWidth < 900;
+    const isMobile = computed(() => window.innerWidth < 900);
     // Scroll handler
     const currentlyScrolling = ref(false);
     const isScrolled = ref(false);
