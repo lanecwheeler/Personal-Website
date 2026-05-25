@@ -64,7 +64,6 @@
     const hslParts = computed(() => `hsl(${isNastyColor ? h.value + 180 : h.value} ${s.value} ${l.value})`);
 
     const isMobile = ref(window.innerWidth < 900);
-
     const handleResize = () => isMobile.value = window.innerWidth < 900;
     // Scroll handler
     const currentlyScrolling = ref(false);
@@ -88,7 +87,7 @@
     })
 
     const handleScroll = (e) => {
-        if (isMobile) {
+        if (isMobile.value) {
             const curPos = contentEl.value.scrollTop;
             if (curPos >= 100 && !isScrolled.value) {
                 isScrolled.value = true;
@@ -105,7 +104,7 @@
     }
 
     const handleWheel = (e) => {
-        if (!isMobile) {
+        if (!isMobile.value) {
             const el = e.target;
             const isUp = e.deltaY < 0;
             const isInModal = el.closest('.modalOverlay.open');
@@ -127,7 +126,8 @@
     }
 
     const setFace = (index) => {
-        if (isMobile) {
+        if (isMobile.value) {
+            console.log('here')
             document.querySelector(`#card--${index} .scrollAnchor`)
                 .scrollIntoView({ behavior: 'smooth', block: 'start' });
             menuOpen.value = false;
@@ -138,7 +138,7 @@
 
     // Cube Faces
     const currentFace = ref(0);
-    const isOpen = computed(() => currentFace.value !== 0 && !isMobile);
+    const isOpen = computed(() => currentFace.value !== 0 && !isMobile.value);
     const faces = shallowRef({
         0: {title: 'hello', section: undefined, menuTitle: ''},
         1: {title: 'About Me', section: AboutMe, menuTitle: '/AboutMe'},
@@ -463,44 +463,63 @@
             @include media() {
                 transition: var(--quickAnim);
                 position: fixed;
-                width: 100vw;
+                width: auto;
                 left: 0;
+                right: auto;
+                display: flex;
+                flex-direction: column;
+                z-index: 999;
 
                 label {
+                    position: absolute;
+                    right: -2.5em;
+                    left: auto;
+                    bottom: 0;
                     display: inline-block;
                     opacity: 0;
                     pointer-events: none;
                     border: 1px solid var(--accentText);
-                    border-bottom: none;
+                    border-left: none;
+                    border-radius: 0 .5em .5em 0;
+                }
+
+                p {
+                    display: inline-block;
+                    width: auto;
                 }
 
                 &.scrolled {
-                    bottom: -43vh;
+                    bottom: 0;
                     z-index: 999;
+                    right: 100%;
+                    left: -100%;
 
                     label {
                         pointer-events: all;
                         background: black;
                         padding: .5em .25em .75em .75em;
-                        border-radius: .5em .5em 0 0;
                         opacity: 1;
+                        z-index: 1000;
                     }
 
                     &.open {
                         bottom: 0;
+                        left: 0;
+                        right: auto;
 
                         label {
                             margin-bottom: 0em;
-                            position: relative;
+                            margin-right: .1em;
                             padding: .5em .25em .5em .75em;
 
                             &::after {
                                 content: '';
                                 position: absolute;
-                                bottom: -2px;
-                                left: 0;
-                                width: 100%;
-                                height: 4px;
+                                top: 0;
+                                left: -2px;
+                                
+                                height: 100%;
+                                width: 4px;
                                 background: black;
                             }
                         }
@@ -509,7 +528,7 @@
                             opacity: 1;
                             background: rgb(0, 0, 0);
                             border-left: 1px solid var(--accentText); 
-                            border-right: 1px solid var(--accentText); 
+                            border-right: 1px solid var(--accentText);
 
                             &:first-of-type {
                                 border: 1px solid var(--accentText);
